@@ -55,7 +55,7 @@ def isSingleFileContract(source_code_string):
 
 
 if __name__ == '__main__':
-    config = configparser.ConfigParser()
+    
     config = configparser.ConfigParser()
 
     config.read('config.ini')
