@@ -4,6 +4,7 @@ import os
 import configparser
 import pandas
 import re
+import sys
 
 
 def read_contract_address_file(file):
@@ -57,14 +58,8 @@ def isSingleFileContract(source_code_string):
 if __name__ == '__main__':
     
     config = configparser.ConfigParser()
-
     config.read('config.ini')
-    k =0
-    address_list = read_contract_address_file('address.csv')
-    for i in address_list:
-        k = k+1
-        r = call_api(i)
-
-        if(k==100):
-            break
+    
+    #address_list = read_contract_address_file('address.csv')
+    call_api(sys.argv[1])
 
